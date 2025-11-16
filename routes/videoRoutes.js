@@ -5,7 +5,7 @@ const multer = require("multer");
 // Temporary storage folder for multer
 const upload = multer({ dest: "uploads/" });
 
-const { uploadVideo, getVideoById,getVideos } = require("../controllers/videoController");
+const { uploadVideo,getVideos } = require("../controllers/videoController");
 
 // Upload video (POST)
 router.post("/upload", upload.single("video"), uploadVideo);
